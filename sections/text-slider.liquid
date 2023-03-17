@@ -1,0 +1,115 @@
+{% comment %} text-slider {% endcomment %}
+
+<style>
+  #shopify-section-{{ section.id }} { position: sticky; top: 0; z-index: 999; }
+  #section_{{ section.id }}.text-slider { background-color: {{ section.settings.bg_color }}; }
+  .text-slider { position: relative; width: 100%; height: 4rem; overflow-x: hidden; }
+  .text-slider .scroll-element { width: inherit; height: inherit; position: absolute; left: 0%; top: 0%; display: flex; flex-direction: row; align-items: center; justify-content: center; }
+  .text-slider .text-slide { text-align: center; padding: 0.5rem 1rem; height: 4rem; flex: 1 1 100%; }
+  .text-slider .block-width-12 { width: 100%; } 
+  {% comment %} .text-slider .block-width-9 { width: 75%; } {% endcomment %}
+  .text-slider .block-width-6 { width: 50%; }
+  .text-slider .block-width-4 { width: calc(100% / 3); }
+  .text-slider .block-width-3 { width: 25%; }
+  .primary { animation: primary {{ section.settings.slider_speed }}s linear infinite; }
+  .secondary { animation: secondary {{ section.settings.slider_speed }}s linear infinite; }
+
+  @keyframes primary {
+    from {
+      left: 0%;
+    }
+    to {
+      left: -100%;
+    }
+  }
+  
+  @keyframes secondary {
+    from {
+      left: 100%;
+    }
+    to {
+      left: 0%;
+    }
+  }
+</style>
+
+{% liquid 
+  assign block_width = 12 | divided_by: section.blocks.size
+%}
+
+<div class="text-slider" id="section_{{ section.id }}">
+
+  {% capture m_blocks %}
+    {% for block in section.blocks %}
+      {% capture block_style %}
+        {%- unless block.settings.bg_color == blank -%}background-color: {{ block.settings.bg_color }};{%- endunless -%}
+        {%- unless block.settings.text_color == blank -%}color: {{ block.settings.text_color }};{%- endunless -%}
+      {% endcapture %}
+      <div class="text-slide block-width-{{ block_width }}" style="{{ block_style }}">{{ block.settings.title }}</div>
+    {% endfor %}
+  {% endcapture %}
+
+  <div class="scroll-element primary">
+    {{ m_blocks }}
+  </div>
+  <div class="scroll-element secondary">
+    {{ m_blocks }}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Text slider",
+    "class": "text-slider",
+    "max_blocks": 3,
+    "settings": [
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background color",
+        "default": "#E33"
+      },
+      {
+        "type": "number",
+        "id": "slider_speed",
+        "label": "Slider speed",
+        "default": 5
+      }
+    ],
+    "blocks": [
+      {
+        "type": "text-slide",
+        "name": "Text",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Text",
+            "default": "Lorem ipsum"
+          },
+          {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background color"
+          },
+          {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text color",
+            "default": "#FFF"
+          }
+        ]
+      }
+    ],    
+    "presets": [
+      {
+        "name": "Text slider",
+        "blocks": [
+          {
+            "type": "text-slide"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
