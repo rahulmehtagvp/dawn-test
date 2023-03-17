@@ -8,7 +8,7 @@
           "settings": {
             "title": "This is title for text-slider 1!",
             "bg_color": "#185100",
-            "text_color": "#FFF"
+            "text_color": "#ffffff"
           }
         },
         "31942ad7-293c-4c63-bac5-b0857dc9dc8c": {
@@ -16,15 +16,15 @@
           "settings": {
             "title": "This is title for text-slider 2!",
             "bg_color": "#002b66",
-            "text_color": "#FFF"
+            "text_color": "#ffffff"
           }
         },
         "98f6023f-bef1-494f-beab-890d1eb39fff": {
           "type": "text-slide",
           "settings": {
             "title": "This is title for text-slider 3!",
-            "bg_color": "#ff7171",
-            "text_color": "#000000"
+            "bg_color": "#ff0000",
+            "text_color": "#ffffff"
           }
         }
       },
@@ -34,7 +34,7 @@
         "98f6023f-bef1-494f-beab-890d1eb39fff"
       ],
       "settings": {
-        "bg_color": "#E33",
+        "bg_color": "#ee3333",
         "slider_speed": 8
       }
     },
@@ -79,6 +79,7 @@
         "show_text_box": false,
         "desktop_content_alignment": "center",
         "color_scheme": "background-1",
+        "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false
@@ -106,6 +107,8 @@
         "text"
       ],
       "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "background-1",
         "full_width": true,
         "padding_top": 40,
@@ -117,15 +120,22 @@
       "settings": {
         "title": "Featured products",
         "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
         "collection": "all",
         "products_to_show": 8,
         "columns_desktop": 4,
+        "full_width": false,
         "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
         "color_scheme": "background-1",
         "image_ratio": "adapt",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
+        "enable_quick_add": false,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 28,
@@ -165,6 +175,7 @@
         "heading_size": "h2",
         "desktop_layout": "left",
         "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
         "color_scheme": "background-1",
         "padding_top": 36,
         "padding_bottom": 36
@@ -175,6 +186,7 @@
       "settings": {
         "heading": "",
         "heading_size": "h1",
+        "enable_video_looping": false,
         "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "description": "",
         "full_width": false,
