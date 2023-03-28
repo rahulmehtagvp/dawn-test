@@ -2,6 +2,7 @@
   "sections": {
     "text_banner": {
       "type": "text-slider",
+      "disabled": true,
       "blocks": {
         "text-1": {
           "type": "text-slide",
