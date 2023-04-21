@@ -136,6 +136,17 @@
           "color_scheme": "background-1"
         }
       }
+    },
+    "content_for_index": [
+
+    ],
+    "blocks": {
+      "15053636712319505549": {
+        "type": "shopify:\/\/apps\/smits-app\/blocks\/app-embed-script\/c9e85c25-19c8-4932-b3f5-eb6dc68779f5",
+        "disabled": false,
+        "settings": {
+        }
+      }
     }
   },
   "presets": {
