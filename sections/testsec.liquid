@@ -1,6 +1,6 @@
 {%- for block in section.blocks -%}
-  {{ block.product_data.title }}
-  {{ block.product_data.image }}
+  {{ all_products[block.product_data].title }}
+  {{ all_products[block.product_data].image }}
 {%- endfor -%}
 {% schema %}
   {
