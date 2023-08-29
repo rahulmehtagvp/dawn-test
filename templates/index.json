@@ -2,7 +2,6 @@
   "sections": {
     "text_banner": {
       "type": "text-slider",
-      "disabled": true,
       "blocks": {
         "text-1": {
           "type": "text-slide",
@@ -34,6 +33,7 @@
         "31942ad7-293c-4c63-bac5-b0857dc9dc8c",
         "98f6023f-bef1-494f-beab-890d1eb39fff"
       ],
+      "disabled": true,
       "settings": {
         "bg_color": "#ee3333",
         "slider_speed": 8
@@ -248,6 +248,29 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "79ce2713-f54d-492d-a29a-f86f12d0d3ff": {
+      "type": "testsec",
+      "blocks": {
+        "48a00f5d-eaf6-4ee7-8f91-6d61f16324fe": {
+          "type": "product",
+          "settings": {
+            "product_data": "test-gloves"
+          }
+        },
+        "5bef078a-9adb-451f-a669-100693d3fef4": {
+          "type": "product",
+          "settings": {
+            "product_data": "test-gloves"
+          }
+        }
+      },
+      "block_order": [
+        "48a00f5d-eaf6-4ee7-8f91-6d61f16324fe",
+        "5bef078a-9adb-451f-a669-100693d3fef4"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -257,6 +280,7 @@
     "featured_collection",
     "collage",
     "video",
-    "multicolumn"
+    "multicolumn",
+    "79ce2713-f54d-492d-a29a-f86f12d0d3ff"
   ]
 }
