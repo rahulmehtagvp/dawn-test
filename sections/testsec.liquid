@@ -1,4 +1,7 @@
-
+{%- for block in section.blocks -%}
+  {{ block.product_data.title }}
+  {{ block.product_data.image }}
+{%- endfor -%}
 {% schema %}
   {
     "name": "Section name",
