@@ -1,7 +1,21 @@
+
 {% schema %}
   {
     "name": "Section name",
-    "settings": []
+    "blocks": [
+    {
+      "type": "product",
+      "name": "product_name",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "product",
+          "id": "product_data",
+          "label": "Select product"
+        }
+      ]
+    }
+  ]
   }
 {% endschema %}
 
